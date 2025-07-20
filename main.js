@@ -28,6 +28,9 @@ function applyOperator(add,sub,mult,div,num1,num2)
 
 function getResult(inp)
 {
+    if(!isNaN(inp.value)) return inp.value;
+    if("+-*/".includes(inp.value.charAt(inp.value.length-1))) return "Invalid Input!";
+
     let nums ="";
     var final = 0;
     var firstnum = false;
