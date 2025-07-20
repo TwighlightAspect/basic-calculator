@@ -78,7 +78,13 @@ function getResult(inp)
 
 function returnResult()
 {
-    var resultfield = document.getElementById("answer");
-    resultfield.innerHTML = "Result: " + String(getResult(document.getElementById("tocalculate")));
+    var inputfield = document.getElementById("tocalculate");
+
+    if(inputfield.value!=""){
+        var resultfield = document.getElementById("answer");
+        resultfield.innerHTML = "Result: " + String(getResult(document.getElementById("tocalculate")));
+        inputfield.value ="";
+    }
+    
 
 }
